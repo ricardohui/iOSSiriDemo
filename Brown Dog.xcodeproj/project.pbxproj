@@ -12,7 +12,33 @@
 		B880A2871EFD75100053B530 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B880A2851EFD75100053B530 /* Main.storyboard */; };
 		B880A2891EFD75100053B530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B880A2881EFD75100053B530 /* Assets.xcassets */; };
 		B880A28C1EFD75100053B530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B880A28A1EFD75100053B530 /* LaunchScreen.storyboard */; };
+		B880A29A1EFD75340053B530 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B880A2991EFD75340053B530 /* IntentHandler.swift */; };
+		B880A29E1EFD75340053B530 /* DogIntents.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B880A2971EFD75340053B530 /* DogIntents.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B880A29C1EFD75340053B530 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B880A2761EFD75100053B530 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B880A2961EFD75340053B530;
+			remoteInfo = DogIntents;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B880A2A21EFD75340053B530 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B880A29E1EFD75340053B530 /* DogIntents.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B880A27E1EFD75100053B530 /* Brown Dog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brown Dog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +48,21 @@
 		B880A2881EFD75100053B530 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B880A28B1EFD75100053B530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B880A28D1EFD75100053B530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B880A2971EFD75340053B530 /* DogIntents.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = DogIntents.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		B880A2991EFD75340053B530 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		B880A29B1EFD75340053B530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8D755961EFD7601008B61AE /* Brown Dog.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Brown Dog.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B880A27B1EFD75100053B530 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B880A2941EFD75340053B530 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				B880A2801EFD75100053B530 /* Brown Dog */,
+				B880A2981EFD75340053B530 /* DogIntents */,
 				B880A27F1EFD75100053B530 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				B880A27E1EFD75100053B530 /* Brown Dog.app */,
+				B880A2971EFD75340053B530 /* DogIntents.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,6 +93,7 @@
 		B880A2801EFD75100053B530 /* Brown Dog */ = {
 			isa = PBXGroup;
 			children = (
+				B8D755961EFD7601008B61AE /* Brown Dog.entitlements */,
 				B880A2811EFD75100053B530 /* AppDelegate.swift */,
 				B880A2831EFD75100053B530 /* ViewController.swift */,
 				B880A2851EFD75100053B530 /* Main.storyboard */,
@@ -62,6 +102,15 @@
 				B880A28D1EFD75100053B530 /* Info.plist */,
 			);
 			path = "Brown Dog";
+			sourceTree = "<group>";
+		};
+		B880A2981EFD75340053B530 /* DogIntents */ = {
+			isa = PBXGroup;
+			children = (
+				B880A2991EFD75340053B530 /* IntentHandler.swift */,
+				B880A29B1EFD75340053B530 /* Info.plist */,
+			);
+			path = DogIntents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,15 +123,34 @@
 				B880A27A1EFD75100053B530 /* Sources */,
 				B880A27B1EFD75100053B530 /* Frameworks */,
 				B880A27C1EFD75100053B530 /* Resources */,
+				B880A2A21EFD75340053B530 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B880A29D1EFD75340053B530 /* PBXTargetDependency */,
 			);
 			name = "Brown Dog";
 			productName = "Brown Dog";
 			productReference = B880A27E1EFD75100053B530 /* Brown Dog.app */;
 			productType = "com.apple.product-type.application";
+		};
+		B880A2961EFD75340053B530 /* DogIntents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B880A29F1EFD75340053B530 /* Build configuration list for PBXNativeTarget "DogIntents" */;
+			buildPhases = (
+				B880A2931EFD75340053B530 /* Sources */,
+				B880A2941EFD75340053B530 /* Frameworks */,
+				B880A2951EFD75340053B530 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DogIntents;
+			productName = DogIntents;
+			productReference = B880A2971EFD75340053B530 /* DogIntents.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -96,6 +164,17 @@
 				TargetAttributes = {
 					B880A27D1EFD75100053B530 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = WLDBM3YRW9;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Siri = {
+								enabled = 1;
+							};
+						};
+					};
+					B880A2961EFD75340053B530 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = WLDBM3YRW9;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -114,6 +193,7 @@
 			projectRoot = "";
 			targets = (
 				B880A27D1EFD75100053B530 /* Brown Dog */,
+				B880A2961EFD75340053B530 /* DogIntents */,
 			);
 		};
 /* End PBXProject section */
@@ -129,6 +209,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B880A2951EFD75340053B530 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -141,7 +228,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B880A2931EFD75340053B530 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B880A29A1EFD75340053B530 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B880A29D1EFD75340053B530 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B880A2961EFD75340053B530 /* DogIntents */;
+			targetProxy = B880A29C1EFD75340053B530 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B880A2851EFD75100053B530 /* Main.storyboard */ = {
@@ -261,10 +364,13 @@
 		B880A2911EFD75100053B530 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Brown Dog/Brown Dog.entitlements";
+				DEVELOPMENT_TEAM = WLDBM3YRW9;
 				INFOPLIST_FILE = "Brown Dog/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zappycode.Brown-Dog";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zappycode.Brown-Doggy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -273,11 +379,40 @@
 		B880A2921EFD75100053B530 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Brown Dog/Brown Dog.entitlements";
+				DEVELOPMENT_TEAM = WLDBM3YRW9;
 				INFOPLIST_FILE = "Brown Dog/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zappycode.Brown-Dog";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zappycode.Brown-Doggy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B880A2A01EFD75340053B530 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = WLDBM3YRW9;
+				INFOPLIST_FILE = DogIntents/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zappycode.Brown-Doggy.DogIntents";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B880A2A11EFD75340053B530 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = WLDBM3YRW9;
+				INFOPLIST_FILE = DogIntents/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zappycode.Brown-Doggy.DogIntents";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -301,6 +436,16 @@
 				B880A2921EFD75100053B530 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B880A29F1EFD75340053B530 /* Build configuration list for PBXNativeTarget "DogIntents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B880A2A01EFD75340053B530 /* Debug */,
+				B880A2A11EFD75340053B530 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
